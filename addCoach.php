@@ -163,8 +163,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $experience_err; ?></span>
             </div> 
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-				<a href="readTeam.php?id=<?php echo $_SESSION["currentTeamId"]; ?>" class="btn btn-danger float-right">Back</a>
+				<a href="readTeam.php?id=<?php echo $_SESSION["currentTeamId"]; ?>" class="btn btn-danger">Back</a>
+                <input type="submit" class="btn btn-primary float-right" value="Submit">
             </div>
         </form>
 	</div>    

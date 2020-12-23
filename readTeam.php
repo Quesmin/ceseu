@@ -66,21 +66,19 @@ $team_name = $result_team[0];
                     // Attempt select query execution
                     //$sql = "SELECT players.id, persons.fname, persons.lname, players.nickname, persons.birthdate FROM teams JOIN players on players.team = teams.id JOIN persons on persons.id = players.id WHERE teams.id =". $_GET["id"];
 					$sql = "SELECT * FROM teams JOIN players on players.team = teams.id JOIN persons on persons.id = players.id WHERE teams.id =". $_GET["id"];
-					
+					echo "<h2><strong> Team:</strong> <em>".$team_name."</em></h2>";
 					
                     //echo $sql;
 						if($result = mysqli_query($link, $sql)){
 							if(mysqli_num_rows($result) > 0){
-								echo "<h2><strong> Team:</strong> ".$team_name."</h2>";
 								echo "<table class='table table-dark table-hover'>";
 									echo "<thead>";
 										echo "<tr>";
-											echo "<th>#</th>";
 											echo "<th>First Name</th>";
 											echo "<th>Last Name</th>";
 											echo "<th>Nickname</th>";
 											echo "<th>Birthdate</th>";
-											echo "<th>Actions</th>";
+											echo "<th></th>";
 										echo "</tr>";
 									echo "</thead>";
 									echo "<tbody>";
@@ -88,7 +86,6 @@ $team_name = $result_team[0];
 									while($row = mysqli_fetch_array($result)){
 										//echo $row[2];
 										echo "<tr>";
-											echo "<td>" . $row['id'] . "</td>";
 											echo "<td>" . $row['fname'] . "</td>";
 											echo "<td>" . $row['lname'] . "</td>";
 											echo "<td>" . $row['nickname'] . "</td>";
@@ -124,7 +121,7 @@ $team_name = $result_team[0];
                     // Attempt select query execution
                     //$sql = "SELECT players.id, persons.fname, persons.lname, players.nickname, persons.birthdate FROM teams JOIN players on players.team = teams.id JOIN persons on persons.id = players.id WHERE teams.id =". $_GET["id"];
 					$sql = "SELECT * FROM coaches JOIN teams on coaches.id = teams.coach JOIN persons ON persons.id = coaches.id WHERE teams.id =". $_GET["id"];
-					echo "<h2> Coach:</h2>";
+					echo "<h2><strong>Coach:</strong></h2>";
 					
                     //echo $sql;
 						if($result = mysqli_query($link, $sql)){
@@ -137,7 +134,7 @@ $team_name = $result_team[0];
 											echo "<th>Last Name</th>";
 											echo "<th>Experience</th>";
 											echo "<th>Birthdate</th>";
-											echo "<th>Actions</th>";
+											echo "<th></th>";
 										echo "</tr>";
 									echo "</thead>";
 									echo "<tbody>";

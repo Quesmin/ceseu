@@ -46,7 +46,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || !$_SESSION
                             echo "<table class='table table-dark table-hover'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>#</th>";
                                         echo "<th>Team Name</th>";
                                         echo "<th>Team Code</th>";
                                         echo "<th></th>";
@@ -55,7 +54,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || !$_SESSION
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['name'] . "</td>";
                                         echo "<td>" . $row['shortname'] . "</td>";
                                         echo "<td>";

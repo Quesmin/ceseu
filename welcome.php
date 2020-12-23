@@ -31,7 +31,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			if($_SESSION["tournament"]){
 				
     
-				echo "<a href='upload.php' class='btn btn-primary'>Upload</a>";
+				echo "<a href='upload.php' class='btn btn-primary'>Manage</a>";
 			} else {
 				echo "<a href='viewTournaments.php' class='btn btn-primary'>View Tournaments</a>";
 			}

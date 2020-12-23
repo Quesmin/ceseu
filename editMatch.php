@@ -47,7 +47,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || !$_SESSION
                             echo "<table class='table table-dark table-hover'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>#</th>";
                                         echo "<th>Team 1</th>";
                                         echo "<th>Team 2</th>";
 										echo "<th>Score 1</th>";
@@ -60,7 +59,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || !$_SESSION
 									
 									
                                     echo "<tr>";
-                                        echo "<td>" . $row['0'] . "</td>";
                                         echo "<td>" . $row['1'] . "</td>";
                                         echo "<td>" . $row['2']. "</td>";
 										echo "<td>" . $row['3'] . "</td>";
