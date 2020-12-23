@@ -129,7 +129,6 @@ $team_name = $result_team[0];
 								echo "<table class='table table-dark table-hover'>";
 									echo "<thead>";
 										echo "<tr>";
-											echo "<th>#</th>";
 											echo "<th>First Name</th>";
 											echo "<th>Last Name</th>";
 											echo "<th>Experience</th>";
@@ -142,7 +141,6 @@ $team_name = $result_team[0];
 									while($row = mysqli_fetch_array($result)){
 										//echo $row[2];
 										echo "<tr>";
-											echo "<td>" . $row['id'] . "</td>";
 											echo "<td>" . $row['fname'] . "</td>";
 											echo "<td>" . $row['lname'] . "</td>";
 											echo "<td>" . $row['experience'] . "</td>";
