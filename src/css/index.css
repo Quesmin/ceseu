@@ -17,8 +17,6 @@
 }
 
 body{
-    zoom:50%;
-    transform:translate(50%,50%);
     display: grid;
     align-content: center;
     justify-content: center;
@@ -106,7 +104,8 @@ form label{
 .form-control{
     min-height: 3em;
     padding-left: 1.5em;
-    
+    font-size: 1.5em !important;
+    font-weight: 700 !important;
     border-radius: 4.5em !important;
     color: var(--gray-main) !important;
 }

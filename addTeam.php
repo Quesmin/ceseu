@@ -112,8 +112,8 @@ if($_SESSION["tournament"] && $_SESSION["loggedin"] == true){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Creating new team</h2>
-        <p>Please fill this form to create a new team.</p>
+        <h1>Creating new team</h1>
+        <h2>Please fill this form to create a new team.</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 			<div class="form-group <?php echo (!empty($teamname_err)) ? 'has-error' : ''; ?>" >
                 <label>Team Name</label>
